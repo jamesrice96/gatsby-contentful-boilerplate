@@ -19,13 +19,15 @@ const Header = () => (
       }
     `}
     render={data => (
-      <div>
-        {data.allContentfulPage.edges.map(({ node }) => (
-          <Link key={node.id} to={node.slug}>
-            {node.title}
-          </Link>
-        ))}
-      </div>
+      <header>
+        <nav>
+          {data.allContentfulPage.edges.map(({ node }) => (
+            <Link key={node.id} to={node.slug}>
+              {node.title}
+            </Link>
+          ))}
+        </nav>
+      </header>
     )}
   />
 );

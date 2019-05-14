@@ -1,10 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+//Components
+import Header from '../components/Header';
 
 export default ({ data }) => {
   const page = data.contentfulPage;
   return (
     <>
+      <Header />
       <h1>Hello from the default template</h1>
       <p>{page.title}</p>
       <p>{page.pageTitleSeo}</p>
